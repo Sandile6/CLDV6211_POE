@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "My Work";
+}
+<main>
+<h1>My Work</h1>
+<p>Explore our handmade crafts:</p>
+
+    @foreach (var item in Model)
+    {
+        <div class="craft-item">
+            <h2>@item.Name</h2>
+            <p>Price: @item.Price</p>
+            <p>Category: @item.Category</p>
+        </div>
+    }
+</main>

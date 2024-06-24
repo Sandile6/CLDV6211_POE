@@ -1,0 +1,25 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+}
+
+<main aria-labelledby="title">
+    <h3>@ViewBag.Message</h3>
+
+    <body>
+        <h1>Contact Us</h1>
+        <p>If you have any questions or inquiries, please feel free to contact us using the form below:</p>
+
+        <form action="submit-contact-form" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</main>

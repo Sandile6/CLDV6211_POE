@@ -1,0 +1,36 @@
+﻿@model IEnumerable<KhumaloTest.Models.Order>
+
+@{
+    ViewData["Title"] = "My Orders";
+}
+
+<h1>My Orders</h1>
+
+@if (Model != null && Model.Any())
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Craftwork</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Order Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var order in Model)
+            {
+                <tr>
+                    <td>@order.Craftwork.Name</td>
+                    <td>@order.Craftwork.Category</td>
+                    <td>@order.Craftwork.Price.ToString("C")</td>
+                    <td>@order.OrderDate.ToString("MM/dd/yyyy")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No orders found for this email.</p>
+}
